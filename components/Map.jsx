@@ -9,7 +9,7 @@ function GoogleMap(props){
     const locate = useCurrentLocation()
 
     return(
-        <Wrapper apiKey={process.env.google.apiKey}>
+        <Wrapper apiKey={process.env.GoogleAMapsAPI}>
             <Map 
                 center={{
                     lat: locate?.latitude,
