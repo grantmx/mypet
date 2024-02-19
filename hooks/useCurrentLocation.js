@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function useCurrentLocation(){
+    const [ location, setLocation ] = useState(null)
+
     function geoLocate(pos){
         const { latitude, longitude } = pos.coords
 
-        return { 
+        setLocation({ 
             latitude, 
             longitude 
-        }
+        })
     }
 
 
@@ -17,15 +19,20 @@ export default function useCurrentLocation(){
     }
 
 
-    const options = {
-        enableHighAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0,
-    };
-
     useEffect(() => {
+        const options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0,
+        };
+
         navigator.geolocation.getCurrentPosition(geoLocate, error, options)
 
     }, [])
+
+
+    return{
+        ...location,
+    }
 
 }

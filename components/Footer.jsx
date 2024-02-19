@@ -43,8 +43,8 @@ function Footer(){
                         icon={<PetsIcon />} 
                     />
 
-                    <BottomNavigationAction  href="/pet" label="Vet Care" icon={<LocalHospitalIcon />} />
-                    <BottomNavigationAction href="/insurance" label="Pet Insurance" icon={<BeachAccessIcon />} />
+                    <BottomNavigationAction  href="/pet" label="Care" icon={<LocalHospitalIcon />} />
+                    <BottomNavigationAction href="/insurance" label="Coverage" icon={<BeachAccessIcon />} />
                     <BottomNavigationAction href="/finder" label="Finder" icon={<LocationOnIcon />} />
                 </BottomNavigation>
             </Paper>

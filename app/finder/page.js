@@ -6,7 +6,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 function Finder(){
 
     return(
-        <Grid container spacing={2}>
+        <Grid container>
 			<Grid xs={12}>
                 <GoogleMap />
             </Grid>

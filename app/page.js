@@ -10,7 +10,7 @@ import vet from "@/public/2023-04-13.jpg";
 import ContentCutOutlinedIcon from '@mui/icons-material/ContentCutOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
-import { blue, blueGrey, green, pink } from '@mui/material/colors';
+import { blue, orange, green, pink } from '@mui/material/colors';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 
@@ -73,7 +73,7 @@ export default function Home() {
 				<Grid container spacing={2}>
 					<Grid xs={4}>
 						<Stack spacing={2} alignItems="center">
-							<Avatar sx={{ width: 75, height: 75, bgcolor: blueGrey[500] }}>
+							<Avatar sx={{ width: 75, height: 75, bgcolor: orange[500] }}>
 								<ContentCutOutlinedIcon fontSize='large' />
 							</Avatar>
 
