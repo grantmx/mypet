@@ -5,15 +5,30 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import FolderIcon from '@mui/icons-material/Folder';
+import Image from "next/image";
+import insuranceAd from "@/public/petsure-ad.jpg"
 
 
+// 488245019
 
 function Insurance(){
     return(
-        <Grid container>
+        <Grid container sx={{ marginBottom: 8 }}>
+            <Grid xs={12} sx={{ p: 2 }}>
+                <Image 
+                    src={insuranceAd}
+                    width={400}
+                    height={225}
+                    alt="ad"
+                    style={{ objectFit: "contain", width: "100%", height: "auto", borderRadius: 10 }}
+                />
+            </Grid>
+
+
+
 			<Grid xs={12} sx={{ p: 2 }}>
                 <Typography variant="h4">
-                    Coverage & History
+                    Insurance History
                 </Typography>
             </Grid>
 

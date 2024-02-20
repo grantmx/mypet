@@ -10,8 +10,9 @@ import vet from "@/public/2023-04-13.jpg";
 import ContentCutOutlinedIcon from '@mui/icons-material/ContentCutOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
-import { blue, orange, green, pink } from '@mui/material/colors';
+import { blue, orange, green } from '@mui/material/colors';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
+import insuranceAd from "@/public/petsure-ad.jpg"
 
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
 			</Box>
 
 
-			<Container maxWidth="sm">
+			<Container maxWidth="sm" sx={{ marginBottom: 8 }}>
 				<Grid container spacing={2}>
 					<Grid xs={12}>
 						<Stack spacing={2} direction="row" alignItems="center" sx={{ marginBottom: "40px" }}>
@@ -110,6 +111,18 @@ export default function Home() {
 
 				<Divider sx={{ margin: "30px 0 30px 0" }} />
 
+				<Grid xs={12} sx={{ p: 2 }}>
+					<Image 
+						src={insuranceAd}
+						width={400}
+						height={225}
+						alt="ad"
+						style={{ objectFit: "contain", width: "100%", height: "auto", borderRadius: 10 }}
+					/>
+				</Grid>
+
+				<Divider sx={{ margin: "30px 0 30px 0" }} />
+
 				<Grid container spacing={2}>
 					<Grid xs={12}>
 						<Button 
@@ -120,12 +133,12 @@ export default function Home() {
 							endIcon={<ArrowCircleRightOutlinedIcon fontSize='large' />}
 						>
 							<Typography noWrap variant='h6'>
-								Found a stray?
+								Found my stray?
 							</Typography>
 						</Button>
 						
 						<Typography noWrap variant='subtitle2' sx={{ textAlign: "center" }}>
-							Report a stray pet to get it home safe.
+							Report my pet lost to get it home safe.
 						</Typography>
 					</Grid>
 				</Grid>

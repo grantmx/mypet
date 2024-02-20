@@ -14,7 +14,7 @@ import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 
 function Pet() {
     return (
-        <Card sx={{ width: "100%" }} elevation={0}>
+        <Card sx={{ width: "100%", marginBottom: 8 }} elevation={0}>
             <CardMedia
                 sx={{ height: 500 }}
                 image={fluffy.src}

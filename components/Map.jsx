@@ -8,6 +8,7 @@ import { Avatar, Backdrop, Box, Container, Grid, Stack } from "@mui/material";
 import fluffy from "@/public/fido.jpg"
 import CircularProgress from '@mui/material/CircularProgress';
 
+const center = { lat: -33.977074, lng: 22.457581 }
 
 function GoogleMap(){
     const locate = useCurrentLocation()
@@ -28,8 +29,8 @@ function GoogleMap(){
                 return(
                     <Map 
                         center={{
-                            lat: locate?.latitude,
-                            lng: locate?.longitude
+                            lat: locate?.latitude ?? center.lat,
+                            lng: locate?.longitude ?? center.lng
                         }} 
                     />
                 )
@@ -55,10 +56,10 @@ export default GoogleMap;
 const InfoWindow = () => {
     return(
         <Grid container spacing={2}>
-			<Grid xs={12} style={{ display: "flex" }}>
+			<Grid style={{ display: "flex" }}>
                 <Avatar alt="Natacha" src={fluffy.src} style={{ width: 100, height: 100 }}/>
             
-                <Grid xs={12} style={{ display: "flex", width: 200, flexDirection: "column", paddingLeft: 10 }}>
+                <Grid style={{ display: "flex", width: 300, flexDirection: "column", paddingLeft: 10 }}>
                     <h2 style={{ marginBottom: 0 }}>
                         Snoopy
                     </h2>
@@ -83,7 +84,7 @@ const InfoWindow = () => {
 
 
 
-function Map({ center = { lat: -33.977074, lng: 22.457581 }, zoom = 19, className }) {
+function Map({ center = null, zoom = 19, className }) {
 	const mapRef = useRef(null);
 
 	useEffect(() => {

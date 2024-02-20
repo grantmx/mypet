@@ -44,7 +44,7 @@ function Footer(){
                     />
 
                     <BottomNavigationAction  href="/pet" label="Care" icon={<LocalHospitalIcon />} />
-                    <BottomNavigationAction href="/insurance" label="Coverage" icon={<BeachAccessIcon />} />
+                    <BottomNavigationAction href="/insurance" label="Insurance" icon={<BeachAccessIcon />} />
                     <BottomNavigationAction href="/finder" label="Finder" icon={<LocationOnIcon />} />
                 </BottomNavigation>
             </Paper>
