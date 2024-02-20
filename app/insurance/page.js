@@ -26,6 +26,7 @@ function Insurance(){
                     </ListItemAvatar>
                     <ListItemText primary="Veterinary Visit" secondary="Jan 9, 2018" />
                 </ListItem>
+
                 <Divider component="li" />
                 <ListItem>
                     <ListItemAvatar>
@@ -91,3 +92,5 @@ function Insurance(){
 }
 
 export default Insurance;
+
+
